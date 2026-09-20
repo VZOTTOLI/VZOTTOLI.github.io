@@ -12,12 +12,7 @@ h2,h3 {
     color: black
 
 }
-
-#main-header h1 {
-color: white;
-
-}
-    
+   
 
 #main-header {
     background-color: rgb(84, 11, 11);
@@ -46,4 +41,9 @@ th, td {
 th {
     background-color: rgb(84, 11, 11);
     color: white;
+}
+
+#main-header h1 {
+color: white;
+
 }
