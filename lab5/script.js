@@ -34,8 +34,8 @@ const moneydeposit2 = 40;
 function depositMoney() {
 accountBalance2 = accountBalance2 + moneydeposit2;
 
-    const moneyText = document.getElementById("money-display");
-    const statusText = document.getElementById("status-message");
+    const moneyText = document.getElementById("money-display2");
+    const statusText = document.getElementById("status-message2");
 
     moneyText.innerText = accountBalance2;
 
