@@ -28,7 +28,7 @@ function withdrawMoney() {
     }
 }
 
-let accountBalance = 800;
+let accountBalance = 0;
 const moneydeposit = 40;
 
 function depositMoney() {
@@ -39,7 +39,7 @@ accountBalance = accountBalance + moneydeposit;
 
     moneyText.innerText = accountBalance;
 
-    if(accountBalance > 0)
+    if(accountBalance = 0)
     {
          moneyText.innerText = accountBalance;
         statusText.innerText = "Money Deposit";
