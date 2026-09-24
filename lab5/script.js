@@ -18,10 +18,10 @@ function withdrawMoney() {
     {
         moneyText.innerText = 0;
         statusText.innerText = "Low Balance";
-        statusText.style.color = "#ffc116"; 
+        statusText.style.color = "#000000"; 
         statusText.style.fontweight = "bold";
 
-        document.body.style.backgroundColor = "#08f528"; 
+        document.body.style.backgroundColor = "#d64330"; 
 
         document.querySelector("button").disabled = true;
         document.querySelector("button").innertext = "Dead";     
