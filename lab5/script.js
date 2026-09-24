@@ -1,27 +1,27 @@
-let playerHealth = 100;
-const damageAmount = 30;
+let accountBalance = 100;
+const moneyWithdraw = 10;
 
-function takeDamage() {
-    playerHealth = playerHealth - damageAmount;
+function moneyWithdraw() {
+    accountBalance = accountBalance - moneyWithdraw;
 
-    const healthText = document.getElementById("health-display");
+    const moneyText = document.getElementById("money-display");
     const statusText = document.getElementById("status-message");
 
-    healthText.innerText = playerHealth;
+    healthText.innerText = accountBalance;
 
-    if(playerHealth > 0)
+    if(accountBalance > 0)
     {
-         healthText.innerText = playerHealth;
-        statusText.innerText = "You've been hit!";
+         moneyText.innerText = accountBalance;
+        statusText.innerText = "Money Withdrew";
     }
     else
     {
-        healthText.innerText = 0;
-        statusText.innerText = "Game over!";
+        moneyText.innerText = 0;
+        statusText.innerText = "Low Balance";
         statusText.style.color = "#f9331d"; 
         statusText.style.fontweight = "bold";
 
-        document.body.style.backgroundColor = "#5a1a1a"; 
+        document.body.style.backgroundColor = "#f5aa08"; 
 
         document.querySelector("button").disabled = true;
         document.querySelector("button").innertext = "Dead";     
