@@ -51,7 +51,7 @@ accountBalance = accountBalance + moneydeposit;
         statusText.style.color = "#000000"; 
         statusText.style.fontweight = "bold";
 
-        document.body.style.backgroundColor = "#d64330"; 
+        document.body.style.backgroundColor = "#306ad6"; 
 
         document.querySelector("button").disabled = true;
         document.querySelector("button").innertext = "Max";     
