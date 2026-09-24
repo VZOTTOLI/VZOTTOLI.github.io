@@ -28,20 +28,20 @@ function withdrawMoney() {
     }
 }
 
-let accountBalance = 0;
-const moneydeposit = 40;
+let accountBalance2 = 0;
+const moneydeposit2 = 40;
 
 function depositMoney() {
-accountBalance = accountBalance + moneydeposit;
+accountBalance2 = accountBalance2 + moneydeposit2;
 
     const moneyText = document.getElementById("money-display");
     const statusText = document.getElementById("status-message");
 
-    moneyText.innerText = accountBalance;
+    moneyText.innerText = accountBalance2;
 
-    if(accountBalance = 0)
+    if(accountBalance2 = 0)
     {
-         moneyText.innerText = accountBalance;
+        moneyText.innerText = accountBalance2;
         statusText.innerText = "Money Deposit";
     }
     else
