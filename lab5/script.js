@@ -1,13 +1,13 @@
 let accountBalance = 100;
 const moneyWithdraw = 10;
 
-function moneyWithdraw() {
+function withdrawMoney() {
     accountBalance = accountBalance - moneyWithdraw;
 
     const moneyText = document.getElementById("money-display");
     const statusText = document.getElementById("status-message");
 
-    healthText.innerText = accountBalance;
+    moneyText.innerText = accountBalance;
 
     if(accountBalance > 0)
     {
@@ -18,10 +18,10 @@ function moneyWithdraw() {
     {
         moneyText.innerText = 0;
         statusText.innerText = "Low Balance";
-        statusText.style.color = "#f9331d"; 
+        statusText.style.color = "#ffc116"; 
         statusText.style.fontweight = "bold";
 
-        document.body.style.backgroundColor = "#f5aa08"; 
+        document.body.style.backgroundColor = "#08f528"; 
 
         document.querySelector("button").disabled = true;
         document.querySelector("button").innertext = "Dead";     
