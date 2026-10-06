@@ -1,9 +1,10 @@
-/* ==============================
+/* =========================================
    Game Day Checklist
-   Main Stylesheet
-   ============================== */
+   Garnet & Black Theme
+   ========================================= */
 
-/* ---------- Base Styles ---------- */
+
+/* ---------- Global Styles ---------- */
 
 * {
     box-sizing: border-box;
@@ -17,8 +18,14 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f5f7;
-    color: #1f2933;
+    background-color: #000000;
+    color: #ffffff;
+
+    /* Center the main content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     line-height: 1.5;
 }
 
@@ -26,15 +33,17 @@ body {
 /* ---------- Header ---------- */
 
 header {
-    background-color: #1f3a5f;
+    width: 100%;
+    background-color: #73000a;
     color: #ffffff;
     padding: 2rem 1rem;
     text-align: center;
+    border-bottom: 4px solid #ffffff;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
@@ -44,25 +53,28 @@ header h1 {
 main {
     width: 100%;
     max-width: 700px;
-    margin: 0 auto;
     padding: 2rem 1rem;
+    margin: 0 auto;
 }
 
 
 /* ---------- Checklist Section ---------- */
 
 section {
-    background-color: #ffffff;
+    width: 100%;
+    background-color: #111111;
     padding: 2rem;
+    border: 2px solid #73000a;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 20px rgba(115, 0, 10, 0.35);
 }
 
 section h2 {
     margin-top: 0;
     margin-bottom: 1.5rem;
-    color: #1f3a5f;
-    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.75rem;
 }
 
 
@@ -76,50 +88,66 @@ section h2 {
 }
 
 #checklist-form label {
+    color: #ffffff;
     font-weight: 600;
-    color: #374151;
 }
 
 #item-input {
     width: 100%;
-    padding: 0.75rem 1rem;
-    border: 2px solid #d1d5db;
-    border-radius: 6px;
-    font-size: 1rem;
-    color: #1f2933;
+    padding: 0.8rem 1rem;
+
     background-color: #ffffff;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    color: #000000;
+
+    border: 2px solid #73000a;
+    border-radius: 6px;
+
+    font-size: 1rem;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 #item-input::placeholder {
-    color: #9ca3af;
+    color: #777777;
 }
 
 #item-input:focus {
     outline: none;
-    border-color: #1f3a5f;
-    box-shadow: 0 0 0 3px rgba(31, 58, 95, 0.15);
+    border-color: #a8000e;
+    box-shadow: 0 0 0 3px rgba(115, 0, 10, 0.35);
 }
 
 
 /* ---------- Add Button ---------- */
 
 #checklist-form button {
-    align-self: flex-start;
-    margin-top: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 6px;
-    background-color: #c62828;
+    align-self: center;
+
+    margin-top: 0.75rem;
+    padding: 0.75rem 2rem;
+
+    background-color: #73000a;
     color: #ffffff;
+
+    border: 2px solid #73000a;
+    border-radius: 6px;
+
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
+
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.1s ease;
 }
 
 #checklist-form button:hover {
-    background-color: #a61f1f;
+    background-color: #99000d;
+    border-color: #99000d;
 }
 
 #checklist-form button:active {
@@ -127,7 +155,7 @@ section h2 {
 }
 
 #checklist-form button:focus-visible {
-    outline: 3px solid rgba(198, 40, 40, 0.3);
+    outline: 3px solid #ffffff;
     outline-offset: 2px;
 }
 
@@ -135,25 +163,60 @@ section h2 {
 /* ---------- Checklist ---------- */
 
 #checklist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
     margin: 0;
     padding: 0;
+
     list-style: none;
 }
 
-#checklist-items:empty {
-    min-height: 60px;
+
+/* ---------- Individual Checklist Items ---------- */
+
+/*
+   JavaScript will eventually create <li> elements
+   inside #checklist-items.
+
+   Each item gets its own box with space between items.
+*/
+
+#checklist-items li {
+    width: 100%;
+
+    padding: 1rem;
+
+    background-color: #000000;
+    color: #ffffff;
+
+    border: 2px solid #73000a;
+    border-radius: 6px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+#checklist-items li:hover {
+    background-color: #1a1a1a;
+    border-color: #99000d;
 }
 
 
 /* ---------- Responsive Design ---------- */
 
 @media (max-width: 600px) {
+
     header {
         padding: 1.5rem 1rem;
     }
 
     header h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     main {
@@ -162,7 +225,6 @@ section h2 {
 
     section {
         padding: 1.5rem;
-        border-radius: 8px;
     }
 
     #checklist-form button {
