@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game Day Checklist</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Game Day Checklist</h1>
+    </header>
+
+    <main>
+        <section aria-labelledby="checklist-heading">
+            <h2 id="checklist-heading">My Checklist</h2>
+
+            <form id="checklist-form">
+                <label for="item-input">Add an item</label>
+
+                <input
+                    type="text"
+                    id="item-input"
+                    name="item"
+                    placeholder="Enter an item..."
+                    autocomplete="off"
+                >
+
+                <button type="submit">Add Item</button>
+            </form>
+
+            <ul id="checklist-items">
+                <!-- Checklist items will be added here by JavaScript -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
