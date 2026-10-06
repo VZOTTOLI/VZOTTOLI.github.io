@@ -1,0 +1,171 @@
+/* ==============================
+   Game Day Checklist
+   Main Stylesheet
+   ============================== */
+
+/* ---------- Base Styles ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f5f7;
+    color: #1f2933;
+    line-height: 1.5;
+}
+
+
+/* ---------- Header ---------- */
+
+header {
+    background-color: #1f3a5f;
+    color: #ffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+
+/* ---------- Main Content ---------- */
+
+main {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+
+/* ---------- Checklist Section ---------- */
+
+section {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #1f3a5f;
+    font-size: 1.5rem;
+}
+
+
+/* ---------- Form ---------- */
+
+#checklist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+#checklist-form label {
+    font-weight: 600;
+    color: #374151;
+}
+
+#item-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #1f2933;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#item-input::placeholder {
+    color: #9ca3af;
+}
+
+#item-input:focus {
+    outline: none;
+    border-color: #1f3a5f;
+    box-shadow: 0 0 0 3px rgba(31, 58, 95, 0.15);
+}
+
+
+/* ---------- Add Button ---------- */
+
+#checklist-form button {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #c62828;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#checklist-form button:hover {
+    background-color: #a61f1f;
+}
+
+#checklist-form button:active {
+    transform: translateY(1px);
+}
+
+#checklist-form button:focus-visible {
+    outline: 3px solid rgba(198, 40, 40, 0.3);
+    outline-offset: 2px;
+}
+
+
+/* ---------- Checklist ---------- */
+
+#checklist-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#checklist-items:empty {
+    min-height: 60px;
+}
+
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 600px) {
+    header {
+        padding: 1.5rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    #checklist-form button {
+        width: 100%;
+    }
+}
