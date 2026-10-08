@@ -1,0 +1,81 @@
+/* ================================= GENERAL PAGE SETTINGS ================================= */
+
+{
+
+box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { width: 100%; min-height: 100%; }
+
+body { display: flex; min-height: 100vh; font-family: Arial, sans-serif; }
+
+/* ================================= SIDEBAR ================================= */
+
+#sidebar { width: 30%; min-height: 100vh;
+
+background-color: #b9dff0;
+
+padding: 40px 30px;
+
+display: flex; flex-direction: column; align-items: center; }
+
+/* Website Title */
+
+#sidebar h1 { margin-bottom: 50px;
+
+color: #000000;
+
+font-size: 2.5rem; font-weight: bold;
+
+text-align: center; }
+
+/* ================================= SIDEBAR BUTTONS ================================= */
+
+#sidebar button { width: 90%;
+
+padding: 20px 15px; margin-bottom: 25px;
+
+background-color: transparent;
+
+border: 3px solid #ffffff; border-radius: 10px;
+
+color: #ffffff;
+
+font-size: 1.2rem; font-weight: bold;
+
+cursor: pointer;
+
+transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease; }
+
+/* Button Hover */
+
+#sidebar button:hover { background-color: #ffffff; color: #000000;
+
+transform: scale(1.02); }
+
+/* ================================= MAIN BODY ================================= */
+
+#main-content { width: 70%; min-height: 100vh;
+
+background-color: #f2f1ed;
+
+padding: 60px;
+
+color: #000000; }
+
+/* ================================= MAIN BODY HEADINGS ================================= */
+
+#main-content h1, #main-content h2, #main-content h3, #main-content h4 { color: #000000;
+
+font-weight: bold;
+
+margin-bottom: 20px; }
+
+/* ================================= MAIN BODY TEXT ================================= */
+
+#main-content p { color: #000000;
+
+font-weight: normal;
+
+font-size: 1.1rem; line-height: 1.6;
+
+margin-bottom: 20px; }
