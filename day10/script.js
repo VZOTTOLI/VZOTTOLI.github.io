@@ -27,3 +27,25 @@ function loadlevel()
         alert("No save data found...");
     }
 }
+
+function saveData
+{
+  let typedText = document.getElementById("data-input").value;
+  sessionStorage.setItem("tempData", typedText);
+
+  document.getElementById("data-input").value = "";
+}
+
+function loadData()
+{
+   let savedText = sessionStorage.getItem("tempData");
+
+   if(savedtext !== null)
+   {
+    document.getElementById("data").innerText = savedtext;
+   }
+   else
+   {
+    alert("No session data found");
+   }
+}
