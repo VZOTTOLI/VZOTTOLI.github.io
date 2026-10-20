@@ -1,4 +1,4 @@
-let curretnLevel= 1;
+let currentLevel = 1;
 
 function levelUp()
 {
