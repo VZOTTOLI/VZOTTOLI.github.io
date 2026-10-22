@@ -28,7 +28,7 @@ function loadlevel()
     }
 }
 
-function saveData
+function saveData()
 {
   let typedText = document.getElementById("data-input").value;
   sessionStorage.setItem("tempData", typedText);
