@@ -14,6 +14,11 @@ function startGame()
     scoreDisplay.innerText = score;
     timeDisplay.innerText = timeLeft;
 
+    if(timeLeft <= 0)
+    {
+        endGame();
+    }
+
     startButton.disabled = true;
     targetElement.style.display = "block";
     
@@ -31,4 +36,14 @@ function hitTarget()
 {
     score++;    //score = score + 1;
     scoreDisplay.innerText = score;
+}
+
+function endGame()
+{
+    clearInterval(timerId);
+
+    targetElement.style.display = "none";
+    startButton.disabled = false;
+
+    alert("*WHISTLE* You Scored:" + score);
 }
