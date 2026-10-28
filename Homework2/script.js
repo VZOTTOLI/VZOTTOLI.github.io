@@ -72,6 +72,6 @@ function updateScreen() {
 setInterval(function () {
     linesOfCode += interns + developers * 10;
     updateScreen();
-}, 1000);
+}, 100);
 
 updateScreen();
