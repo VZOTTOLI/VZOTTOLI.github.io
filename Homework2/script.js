@@ -8,7 +8,7 @@ let setupCost = 250;
 let interns = 0;
 let internCost = 100;
 let developers = 0;
-let developerCost = 1000;
+let developerCost = 100;
 
 function writeCode() {
     linesOfCode += clickPower;
